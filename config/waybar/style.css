@@ -1,7 +1,7 @@
-@import "/home/Allu/.cache/wal/colors-waybar.css";
 
+@import "/home/Allu//.cache/wal/colors-waybar.css";
 * {
-    font-family: 'Radio Canada Big', sans-serif;
+    font-family: 'Radio Canada Big', 'JetBrainsMono Nerd Font Propo 12', sans-serif;
     font-size: 10px;
     border: none;
    border-radius: 10px;
@@ -62,6 +62,9 @@ button:hover {
     color: #eb4d4b;
 }
 
+#window {
+
+}
 
 
 #mode {
@@ -80,6 +83,7 @@ button:hover {
 #custom-applauncher,
 #custom-power,
 #custom-arch,
+#custom-ncenter,
 #disk {
     background-color: #0f0f0f;
     padding: 0 15px;
@@ -89,7 +93,12 @@ button:hover {
 }
 
 #custom-arch {
-    padding-right: 15px;
+    padding-right: 17px;
+    padding-left: 13px;
+}
+
+#custom-ncenter {
+    padding-right: 14px;
     padding-left: 13px;
 }
 
@@ -134,7 +143,7 @@ label:focus {
 #memory {
     color: @color14;
     background-color: #0f0f0f;
-    padding-left: 8.5px;
+    padding-left: 5.7px;
     padding-right: 8.5px;
 }
 
@@ -175,8 +184,8 @@ label:focus {
 
 #custom-power {
     color: @color14;
-    padding: 7px;
-
+    padding: 3px;
+    padding-right: 6px;
     transition: 0.3s;
     background-color: #0f0f0f;
 }
