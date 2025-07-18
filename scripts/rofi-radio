@@ -1,0 +1,97 @@
+#!/bin/sh
+
+# add more args here according to preference
+ARGS="--no-video"
+
+notification(){
+    # notify the user of the current stream being played
+    # change the icon to whatever you want. make sure your notification server 
+    # supports it and already configured.
+    notify-send "Playing now: " "$@" --icon=media-tape --app-name rofi-radio
+}
+
+# number of the stream as per the $choice variable
+# name of the stream
+# additional tag to filter similar type of streams
+
+menu(){
+    printf "1. Lofi Girl\n"
+    printf "2. Chillhop\n"
+    printf "3. Box Lofi\n"
+    printf "4. The Bootleg Boy\n"
+    printf "5. Radio Spinner\n"
+    printf "6. Dreamhop\n"
+    printf "7. Carti\n"
+    printf "8. WION Live\n"
+}
+
+get_choice() {
+    # auto-detect and use wofi for Wayland and rofi for X11
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+        choice=$(menu | rofi -show -dmenu)
+    elif [ "$XDG_SESSION_TYPE" = "x11" ]; then
+        choice=$(menu | wofi -dmenu)
+    else
+        echo "Unsupported session type: $XDG_SESSION_TYPE"
+        exit 1
+    fi
+    echo "$choice"
+}
+
+main() {
+    choice=$(get_choice)
+
+    case "$choice" in
+        "1. Lofi Girl")
+            notification "Lofi Girl ☕️🎶"
+            URL="https://youtu.be/jfKfPfyJRdk"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "2. Chillhop")
+            notification "Chillhop ☕️🎶"
+            URL="https://youtu.be/7NOSDKb0HlU"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "3. Box Lofi")
+            notification "Anime Lofi nostalgic ☕️🎶"
+            URL="https://youtu.be/WDXPJWIgX-o"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "4. The Bootleg Boy")
+            notification "The Bootleg Boy ☕️🎶"
+            URL="https://youtu.be/WIU-A596KKU"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "5. Radio Spinner")
+            notification "Radio Spinner ☕️🎶"
+            URL="https://live.radiospinner.com/lofi-hip-hop-64"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "6. Dreamhop")
+            notification "Dreamhop ☕️🎶"
+            URL="https://youtu.be/wkhLHTmS_GI"
+            ADDITIONAL_ARGS="--volume=60"
+            ;;
+        "7. Carti")
+            notification "Playboi Carti"
+            URL="https://stream.zeno.fm/b9h0zdunmsytv"
+            ADDITIONAL_ARGS=""
+            ;;
+        "8. WION Live")
+            notification "WION Live 📰"
+            URL="https://youtu.be/lmZRiDMK3OU"
+            ADDITIONAL_ARGS=""
+            ;;
+        *)
+            echo "Invalid choice"
+            exit 1
+            ;;
+    esac
+
+    # run mpv with args and selected url
+    # added title arg to make sure the pkill command kills only this instance of mpv
+    mpv $ARGS --title="radio-mpv" $URL $ADDITIONAL_ARGS
+}
+
+# kill any existing instance of script before starting a new one
+pkill -f radio-mpv || main

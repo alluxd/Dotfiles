@@ -1,0 +1,153 @@
+// -*- mode: jsonc -*-
+{
+    "position": "top",
+    "margin-left": 9,
+    "margin-right": 9,
+    "margin-top": 9,
+    "spacing": 8, 
+        "modules-left" : [
+          "custom/arch",
+          "hyprland/workspaces"
+        ],
+    "modules-center": [
+
+       ],
+    "modules-right": [
+     "network",
+     "pulseaudio",
+
+     "tray",
+     "clock",
+     "custom/power"
+    ],
+  
+   
+  
+   
+
+  "hyprland/workspaces": {
+    "format": "{id}",
+    "on-click": "activate",
+   "format-icons": {
+      "urgent": "󰀨", 
+      "active": "",
+      "default": ""
+    },
+     "persistent-workspaces": {
+    "1": [],
+    "2": [],
+    "3": []
+     }
+  },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        "tooltip": true,
+        "tooltip-format": "Running apps"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "󰥔   {:%H:%M}",
+         "format-alt": "󰃭  {:%d %B, %Y}"
+
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "     {}% ",
+
+        "interval": 10
+
+    },
+
+     "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "    {essid}",
+        "format-ethernet": "Connected ", //change this if yu want
+        "tooltip-format": "Signal Strength: {signalStrength}% \n Left Click: View WiFi Networks",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "󱛅    Disconnected",   
+        "on-click": "~/.local/bin/rofi-wifi-menu.sh"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "󰕾   {volume}%",
+        "format-bluetooth":"󰋋 {volume}%", // copy paste 󰂯 after icon if you want to.
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " {format-source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "Scroll: Change Volume"
+
+    },
+   
+    "custom/arch": {
+        "format": "󰣇",
+        "on-click": "exec rofi -show drun"
+    },
+   
+     "custom/ncenter": {
+        "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+            },
+
+    "custom/power": {
+        "format": "  ",
+        "on-click": "exec wlogout",
+        "on-click-middle": "exec hyprlock",
+        "tooltip": true,
+        "tooltip-format": "Left Click: Power Options \n Middle Click: Lock"
+    },
+
+
+"mpris": {
+  "format": "{player_icon}   {title}",
+  "format-paused": "{status_icon} <i>{title}</i>",
+  "tooltip": true,
+  "tooltip-format": "Up: Next ↥\nDown: Previous ↧\nClick: Pause/Play",
+  "player-icons": {
+    "default": "", 
+    "spotify": ""
+  },
+  "status-icons": {
+    "paused": "⏸",
+    "playing": "▶"
+  },
+  "on-click": "playerctl play-pause",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous",
+  "interval": 2,
+  "escape": true
+}
+
+}
+}

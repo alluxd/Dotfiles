@@ -1,0 +1,217 @@
+@import "/home/Allu/.cache/wal/colors-waybar.css";
+
+* {
+    font-family: 'Radio Canada', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 10px;
+    border: none;
+    border-radius: 3px; 
+  
+}
+
+window#waybar {
+    background-color: transparent;
+      color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-radius: 15px
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+    transition: 0.2s;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    
+}
+
+
+
+#workspaces {
+      background-color: @color10;
+    border-radius: 3px;
+}
+#workspaces button {
+    padding: 0 5px;
+    color: #ffffff;
+    
+}
+
+#workspaces button:hover {
+    color: @color4; 
+}
+
+#workspaces button:active {
+    color: @color1; 
+}
+
+#workspaces button.urgent {
+   color: #eb4d4b;
+}
+
+#mode {
+      background-color: @color10;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#custom-spotify,
+#power-profiles-daemon {
+    padding: 0 5px;
+    color: #FFFFFF;
+    font-size: 14;
+    border-radius: 8px;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is tee rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+      background-color: @color10;
+    color: #FFFFFF;
+    font-size: 15;
+       padding-left: 8.5px;
+      padding-right: 8.5px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+
+#power-profiles-daemon {
+    padding-right: 5px;
+    background-color: transparent;
+}
+
+#power-profiles-daemon.performance {
+    color: #f53c3c;
+
+}
+
+#power-profiles-daemon.balanced {
+   color: #2980b9;
+   
+}
+
+#power-profiles-daemon.power-saver {
+    color: #2ecc71;
+   
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    background-color: #2ecc71;
+    color: #000000;
+}
+
+#memory {
+    color: #FFFFFF;
+      background-color: @color10;
+      padding-left: 8.5px;
+      padding-right: 8.5px;
+}
+
+#disk {
+    background-color: #964B00;
+}
+
+
+#network {
+   color: #FFFFFF;
+      background-color: @color10;
+         padding-left: 8.5px;
+      padding-right: 8.5px;
+}
+
+#network.disconnected {
+   color: #FFFFFF;
+     background-color: @color10;
+}
+
+#pulseaudio {
+   color: #FFFFFF;
+     background-color: @color10;
+}
+
+
+
+#tray {
+      background-color: @color10;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+
+}
+
+
+
+
+
+
+
+
+#custom-applauncher {
+    color: #FFFFFF;
+    padding: 2px;
+    padding-left: 15px;
+    border-radius: 15px;
+      background-color: @color10;
+    transition: 0.3s;
+}
+
+#custom-applauncher:hover {
+    color: #FFFFFF;
+}
+
+#custom-power {
+   color: #FFFFFF;
+    padding: 7px;
+    border-radius: 12px;
+    transition: 0.3s;
+      background-color: @color10;
+}
+
+#custom-spotify {
+    color: #FFFFFF;
+      background-color: @color10;
+   }
