@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 @import "/home/allu/.cache/wal/colors-waybar.css";
 * {
     font-family: 'SF Pro Display', 'JetBrainsMono Nerd Font Propo';
     font-size: 16px;
     border: none;
     font-weight: bold;
+=======
+@import "/home/Allu//.cache/wal/colors-waybar.css";
+* {
+    font-family: 'Radio Canada Big', 'JetBrainsMono Nerd Font Propo 12', sans-serif;
+    font-size: 10px;
+    border: none;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
    border-radius: 10px;
 }
 
@@ -35,13 +43,20 @@ button:hover {
 #workspaces {
     background-color: #0f0f0f;
     border-radius: 20px;
+<<<<<<< HEAD
     font-size: 2px;
+=======
+    font-size: 15px;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     padding: 2px; /* optional for spacing */
 }
 
 #workspaces button {
     padding: 4px;
+<<<<<<< HEAD
     font-size: 2px;
+=======
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     padding-right: 18px;
     padding-left: 18px;
     color: @color15;
@@ -57,7 +72,11 @@ button:hover {
 
 #workspaces button.active {
     background-color: @color3;
+<<<<<<< HEAD
  
+=======
+      font-weight: bold;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
 }
 
 #workspaces button.urgent {
@@ -89,7 +108,11 @@ button:hover {
 #disk {
     background-color: #0f0f0f;
     padding: 0 15px;
+<<<<<<< HEAD
     color: #FFFFFF;
+=======
+    color: @color14;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     font-size: 15;
     border-radius: 20px;
 }
@@ -137,22 +160,52 @@ label:focus {
     background-color: #000000;
 }
 
+<<<<<<< HEAD
 
 
 #network {
     color: @color12;
+=======
+#cpu {
+    background-color: #0f0f0f;
+    color: @color14;
+}
+
+#memory {
+    color: @color14;
+    background-color: #0f0f0f;
+    padding-left: 5.7px;
+    padding-right: 8.5px;
+}
+
+#disk {
+    background-color: #0f0f0f;
+    color: @color14;
+}
+
+#network {
+    color: @color14;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     background-color: #0f0f0f;
     padding-left: 8.5px;
     padding-right: 8.5px;
 }
 
 #network.disconnected {
+<<<<<<< HEAD
     color: @color1;  
+=======
+    color: #eb4d4b;  
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     background-color: #0f0f0f;
 }
 
 #pulseaudio {
+<<<<<<< HEAD
     color: @color13;
+=======
+    color: @color14;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     background-color: #0f0f0f;
 }
 
@@ -170,7 +223,11 @@ label:focus {
 }
 
 #custom-power {
+<<<<<<< HEAD
     color: @color9;
+=======
+    color: @color14;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     padding: 3px;
     padding-right: 6px;
     transition: 0.3s;
@@ -178,7 +235,11 @@ label:focus {
 }
 
 #custom-spotify {
+<<<<<<< HEAD
     color: #e8afac;
+=======
+    color: @color14;
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
     background-color: #0f0f0f;
     font-size: 14px;
 }

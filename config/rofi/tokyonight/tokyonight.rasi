@@ -8,7 +8,11 @@
  */
 
 configuration {
+<<<<<<< HEAD
   font: "Cascadia Sans 10";
+=======
+  font: "Cascadia Code 10";
+>>>>>>> 12757311e9b52b062760b192501a7f6f831fd418
 
   drun {
     display-name: "";
