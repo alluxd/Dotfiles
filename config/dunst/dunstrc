@@ -11,7 +11,7 @@
     progress_bar_min_width = 150
     progress_bar_max_width = 400
     progress_bar_corner_radius = 5
-
+    script = /home/allu/.config/dunst/notify-sound.sh
     indicate_hidden = yes
     shrink = no
 		separator_height = 2
@@ -23,10 +23,10 @@
     sort = yes
     idle_threshold = 120
 
-    font = Radio Canada, Apple Color Emoji
+    font = SF Pro Display, GeistMono Nerd Font Propo
     line_height = 0
     markup = full
-    format = "<span weight='bold' font='12'>%s</span>\n%b"
+    format = "<span weight='bold' font='15'>%s</span>\n%b"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -61,20 +61,20 @@
     highlight = "#CDD6F4"
     frame_color = "#181825"
     timeout = 5
-
+    
 [urgency_normal]
     background = "#181825"
     foreground = "#cdf4e9"
     highlight = "#FDD6F4"
     frame_color = "#181825"
     timeout = 5
-
+    
 [urgency_critical]
     background = "#181825"
     foreground = "#f4cdd6"
     frame_color = "#f38ba8"
     timeout = 1000
-
+    
 [volume]
     appname = "Volume"
     highlight = "#cba6f7"

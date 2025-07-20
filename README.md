@@ -1,8 +1,13 @@
 # my dotfiles 🍃
-my dotfiles can be downloaded here. last updated on: 18, May 2025. Updating changes soon!
-![alt text](assets/image.png)
-### Tested on: 🐧 Arch Linux
+my dotfiles can be downloaded here. 
+last updated on: **20th July, 2025.**
+![alt text](assets/preview.png)
+
+### Tested on:  Arch Linux
 > This was made in Arch Linux, but it will most likely work for other distros too. All you need to do really is to build/install the dependencies.
+
+### 📓 Changelog
+> [Click me!](changes.md)
 
 ### ⏺ Pre-installation steps (Read)
 
@@ -10,7 +15,7 @@ my dotfiles can be downloaded here. last updated on: 18, May 2025. Updating chan
 
 **Dependencies**:
 ```
-hyprland, waybar, playerctl, rofi-lbonn-wayland, swww, dunst, wlogout, grim, slurp, alacritty, python, pywal16, firefox, dolphin, bluez, bluez-utils, networkmanager, network-manager-applet, blueman
+hyprland, waybar, playerctl, rofi-lbonn-wayland, swww, dunst, wlogout, grim, slurp, alacritty, python, pywal16 (or regular pywal), firefox, thunar, bluez, bluez-utils, networkmanager, network-manager-applet, blueman, wl-clipboard, wtype, rofi-emoji, yt-dlp, hyprlock, waypaper, pywalfox, mpv, pamac, hyprpicker
 ```
 
 

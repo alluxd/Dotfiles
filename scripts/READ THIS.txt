@@ -1,2 +1,0 @@
-to make the scripts work, place everything in this folder except this .txt file into ~/.local/bin
-

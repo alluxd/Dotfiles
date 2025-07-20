@@ -1,0 +1,30 @@
+
+{
+  "$schema": ".../json_schema.json",
+
+  "modules": [
+    "break",
+    { "type": "custom", "format": "\u001b[90m┌────── Hardware ──────┐" },
+    { "type": "host",    "key": " PC",    "keyColor": "green" },
+    { "type": "cpu",     "key": "│ ├",    "keyColor": "green" },
+    { "type": "gpu",     "key": "│ ├󰍛",   "keyColor": "green" },
+    { "type": "memory",  "key": "│ ├󰍛",   "keyColor": "green" },
+    { "type": "disk",    "key": "│ ├",   "keyColor": "green" },
+    { "type": "battery", "key": "│ └󰂀",   "keyColor": "green" },
+    { "type": "custom", "format": "\u001b[90m└──────────────────────┘" },
+    "break",
+    { "type": "custom", "format": "\u001b[90m┌────── Software ──────┐" },
+    { "type": "os",       "key": " OS",     "keyColor": "yellow" },
+    { "type": "kernel",   "key": "│ ├",     "keyColor": "yellow" },
+    { "type": "packages", "key": "│ ├󰏖",     "keyColor": "yellow" },
+    { "type": "shell",    "key": "└─┴",     "keyColor": "yellow" },
+    { "type": "custom", "format": "\u001b[90m└──────────────────────┘" },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle",
+      "paddingLeft": 2
+    }
+  ]
+}
+

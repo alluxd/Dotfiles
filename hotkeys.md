@@ -13,11 +13,9 @@
 ## 🪟 **Window Controls**
 - **SUPER + C** → Kill Focused Window  
 
-- **SUPER + Del** → Logout  
+- **SUPER + Alt + Del** → Logout  
 
 - **SUPER + V** → Toggle Floating  
-
-- **SUPER + P** → Pseudo Tiling  
 
 - **SUPER + J** → Split Tiling  
 
@@ -46,6 +44,12 @@
 - **SUPER + B** → Bluetooth Menu  
 
 - **SUPER + .** → Emoji Picker  
+
+- **SUPER + Shift + C** → Color Picker
+
+- **SUPER + Shift + P** → Open pamac
+
+- **SUPER + Shift + G** → Toggle gamemode
 
 
 
