@@ -10,7 +10,7 @@
           "hyprland/workspaces"
         ],
     "modules-center": [
-
+        "mpris"
        ],
     "modules-right": [
      "network",
@@ -89,14 +89,16 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "tooltip": true,
-        "tooltip-format": "Scroll: Change Volume"
+        "tooltip": false,
+        "on-click": "pavucontrol",
+        "on-click-right": "blueman-manager",
 
     },
    
     "custom/arch": {
         "format": "󰣇",
-        "on-click": "exec rofi -show drun"
+        "on-click": "exec rofi -show drun",
+        "tooltip": false,
     },
    
      "custom/ncenter": {
@@ -130,22 +132,22 @@
 
 
 "mpris": {
-  "format": "{player_icon}   {title}",
-  "format-paused": "{status_icon} <i>{title}</i>",
+  "format": "{player_icon} {title} - {artist}",
+  "format-paused": "{status_icon} {title} - {artist}",
   "tooltip": true,
   "tooltip-format": "Up: Next ↥\nDown: Previous ↧\nClick: Pause/Play",
   "player-icons": {
-    "default": "", 
-    "spotify": ""
+    "default": " ", 
+    "spotify": "   ",
+    "mpd": "  ",
   },
   "status-icons": {
-    "paused": "⏸",
-    "playing": "▶"
+    "paused": " ",
+    "playing": " "
   },
   "on-click": "playerctl play-pause",
   "on-scroll-up": "playerctl next",
   "on-scroll-down": "playerctl previous",
-  "interval": 2,
   "escape": true
 }
 
